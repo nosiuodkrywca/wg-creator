@@ -3,7 +3,6 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
-
 const request = require('request').defaults({jar: true})
 
 app.use(bodyParser.json())
