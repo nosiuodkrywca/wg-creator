@@ -2,17 +2,17 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const app = express()
-const port = 5000
+
 
 const request = require('request').defaults({jar: true})
 
 app.use(bodyParser.json())
 
-const cookieJar = request.jar();
 app.use(bodyParser.urlencoded({ extended: false }))
 
 require('dotenv').config()
 
+const port = process.env.PORT;
 const wg_url = process.env.WG_URL;
 const wg_password = process.env.WG_PASSWORD;
 const secret = process.env.SECRET;
