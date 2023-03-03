@@ -2,6 +2,15 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const app = express()
+const cors = require('cors')
+
+const corsOpts = {
+    origin: '*',
+    credentials: true,
+    optionSuccessStatus: 200
+}
+
+app.use(cors(corsOpts))
 
 const request = require('request').defaults({jar: true})
 
