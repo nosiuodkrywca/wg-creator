@@ -6,7 +6,6 @@ const app = express()
 const request = require('request').defaults({jar: true})
 
 app.use(bodyParser.json())
-
 app.use(bodyParser.urlencoded({ extended: false }))
 
 require('dotenv').config()
@@ -45,5 +44,5 @@ app.use('/*', (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`listening on port ${port}`)
 })
